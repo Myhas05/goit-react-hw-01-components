@@ -1,0 +1,31 @@
+.box {
+  display: block;
+  width: 350px;
+  height: 50%;
+  text-align: center;
+  background-color: rgb(236, 233, 233);
+  border-radius: 3px;
+  box-shadow: 1px 1px 4px 0px rgba(233, 225, 225, 0.5);
+  margin: 0 auto;
+}
+.list {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+.listItem {
+  width: 60px;
+  padding: 6px;
+  text-align: center;
+  list-style: none;
+}
+.span {
+  display: block;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-family: cursive;
+}
+.title {
+  font-family: serif;
+  font-size: 32px;
+}

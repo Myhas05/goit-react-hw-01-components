@@ -3,29 +3,29 @@ import T from 'prop-types';
 
 import styles from './SocialProfile.module.css';
 
-const SocialProfile = ({ user: { avatar, location, name, tag, stats } }) => {
+const SocialProfile = ({ user }) => {
   return (
     <section className={styles.profileSection}>
       <div className={styles.profile}>
         <div className={styles.description}>
-          <img src={avatar} alt="user avatar" className={styles.avatar} />
-          <p className={styles.text}>{name}</p>
-          <p className={styles.text}>@{tag}</p>
-          <p className={styles.text}>{location}</p>
+          <img src={user.avatar} alt="user avatar" className={styles.avatar} />
+          <p className={styles.textName}>{user.name}</p>
+          <p className={styles.text}>@{user.tag}</p>
+          <p className={styles.text}>{user.location}</p>
         </div>
 
         <ul className={styles.list}>
           <li className={styles.item}>
             <span className={styles.textSpan}>Followers</span>
-            <span className={styles.textSpan}>{stats.followers}</span>
+            <span className={styles.textSpan}>{user.stats.followers}</span>
           </li>
           <li className={styles.item}>
             <span className={styles.textSpan}>Views</span>
-            <span className={styles.textSpan}>{stats.views}</span>
+            <span className={styles.textSpan}>{user.stats.views}</span>
           </li>
           <li className={styles.item}>
             <span className={styles.textSpan}>Likes</span>
-            <span className={styles.textSpan}>{stats.likes}</span>
+            <span className={styles.textSpan}>{user.stats.likes}</span>
           </li>
         </ul>
       </div>
